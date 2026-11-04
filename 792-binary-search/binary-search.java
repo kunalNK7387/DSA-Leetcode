@@ -3,7 +3,7 @@ class Solution {
         int n=arr.length;
         int start=0;
         int end= n-1;
-        int mid=(start+end)/2;
+        int mid=start+(end - start)/2;
         while(start <= end){
             //Compare targetvalue by mid value
             if(arr[mid]==target){
@@ -17,7 +17,7 @@ class Solution {
                 end=mid-1;
             }
             //update mid
-            mid=(start+end)/2;
+            mid=start+(end-start)/2;
         }
         //if not found return -1
         return -1;
